@@ -20,7 +20,7 @@ or
 ```javascript
 const bash = require('vamtiger-bash').default;
 ```
-Executing a [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+Executing a [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) script returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 ```javascript
 bash('some bash code')
     .then(handleResult)
