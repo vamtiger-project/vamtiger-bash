@@ -29,6 +29,6 @@ bash('some bash code')
 Since [VAMTIGER Bash](https://github.com/vamtiger-project/vamtiger-bash/tree/master) returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), the result can be more conveniently referenced within an [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function):
 ```javascript
 async someAsyncFunction function() {
-    const bashResult = await bash('some bash code');
+    const bashResult = await bash('some bash code').default;
 }
 ```
