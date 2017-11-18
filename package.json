@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-bash",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Programmatically execute bash scripts.",
   "main": "build",
   "repository": "https://github.com/vamtiger-project/vamtiger-bash.git",
