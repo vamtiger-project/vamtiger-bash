@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "Programmatically execute bash scripts.",
   "main": "build",
+  "types": "build/index.d.ts",
   "repository": "https://github.com/vamtiger-project/vamtiger-bash.git",
   "author": "Vamtiger Immortalles",
   "license": "MIT",
