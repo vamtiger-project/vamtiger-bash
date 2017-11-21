@@ -1,4 +1,6 @@
-import {exec} from 'child_process';
+import { exec, ExecOptions} from 'child_process';
 import * as BlueBird from 'bluebird';
 
-export default BlueBird.promisify<string, string>(exec);
+export type VamtigerBash = (script: string, options?: ExecOptions) => BlueBird<string>;
+
+export default BlueBird.promisify(exec) as VamtigerBash;
