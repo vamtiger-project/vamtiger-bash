@@ -1,0 +1,19 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "commonjs",
+      "outDir": "build",
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "noImplicitThis": true,
+      "alwaysStrict": true,
+      "sourceMap": true,
+      "declaration": true,
+      "typeRoots": ["node_modules/@types"]
+    },
+    "include": [
+          "source/**/*"
+      ]
+  }
