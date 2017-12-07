@@ -1,6 +1,13 @@
 import { exec, ExecOptions} from 'child_process';
-import * as BlueBird from 'bluebird';
+import { promisify } from 'util';
 
-export type VamtigerBash = (script: string, options?: ExecOptions) => BlueBird<string>;
+const bash = promisify(exec);
 
-export default BlueBird.promisify(exec) as VamtigerBash;
+export default async function (script: string, options?: ExecOptions) {
+    const result = await bash(script, options);
+    
+    if (result.stderr)
+        throw result.stderr;
+    
+    return result.stdout.toString();
+}
