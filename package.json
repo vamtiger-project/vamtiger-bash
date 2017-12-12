@@ -24,7 +24,5 @@
     "typescript": "^2.6.1",
     "vamtiger-node-typescript-commit": "^0.0.13"
   },
-  "dependencies": {
-    "bluebird": "^3.5.1"
-  }
+  "dependencies": {}
 }
