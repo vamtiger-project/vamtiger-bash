@@ -13,5 +13,5 @@ export default async function (script: string, options?: ExecOptions) {
     if (result.hasOwnProperty('stdout'))
         resultString = result.stdout.toString()
     
-    return typeof resultString === 'string' && resultString || result;
+    return typeof resultString === 'string' && resultString || result; 
 }
