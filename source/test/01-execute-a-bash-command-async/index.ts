@@ -4,7 +4,7 @@ import bash from '../..';
 describe('vamtiger-bash should', function () {
     it('execute a bash command inside async function', async function () {
         const listDirectoryContents = `ls ${__dirname}`;
-        const result = await bash(listDirectoryContents);
+        const result = await bash(listDirectoryContents) as string;
         const directoryContents = result
             .split('\n')
             .map(entry => entry.trim())
