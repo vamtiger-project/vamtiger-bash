@@ -15,12 +15,9 @@ const bash = util_1.promisify && util_1.promisify(child_process_1.exec) || BlueB
 function default_1(script, options) {
     return __awaiter(this, void 0, void 0, function* () {
         let result = yield bash(script, options);
-        let resultString;
         if (result.stderr)
             throw result.stderr;
-        if (result.hasOwnProperty('stdout'))
-            resultString = result.stdout.toString();
-        return typeof resultString === 'string' && resultString || result;
+        return result.hasOwnProperty('stdout') ? result.stdout.toString() : result;
     });
 }
 exports.default = default_1;
