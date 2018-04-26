@@ -18,7 +18,7 @@ function default_1(script, options) {
         let resultString;
         if (result.stderr)
             throw result.stderr;
-        if (result.stdout)
+        if (result.hasOwnProperty('stdout'))
             resultString = result.stdout.toString();
         return typeof resultString === 'string' && resultString || result;
     });
