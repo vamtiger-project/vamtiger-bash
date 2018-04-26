@@ -10,13 +10,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const child_process_1 = require("child_process");
 const util_1 = require("util");
-const bash = util_1.promisify(child_process_1.exec);
+const BlueBird = require("bluebird");
+const bash = util_1.promisify && util_1.promisify(child_process_1.exec) || BlueBird.promisify(child_process_1.exec);
 function default_1(script, options) {
     return __awaiter(this, void 0, void 0, function* () {
-        const result = yield bash(script, options);
+        let result = yield bash(script, options);
+        let resultString;
         if (result.stderr)
             throw result.stderr;
-        return result.stdout.toString();
+        if (typeof result !== 'string' && result.stdout)
+            resultString = result.stdout.toString();
+        return resultString || result;
     });
 }
 exports.default = default_1;
