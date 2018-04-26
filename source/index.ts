@@ -13,5 +13,5 @@ export default async function (script: string, options?: ExecOptions) {
     if (result.stdout)
         resultString = result.stdout.toString()
     
-    return resultString || result;
+    return typeof resultString === 'string' || result;
 }
