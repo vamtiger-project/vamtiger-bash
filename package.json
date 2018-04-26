@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-bash",
-  "version": "0.0.17",
+  "version": "0.0.18-0",
   "description": "Programmatically execute bash scripts.",
   "main": "build",
   "types": "build/index.d.ts",

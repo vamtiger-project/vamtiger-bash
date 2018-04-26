@@ -18,7 +18,7 @@ function default_1(script, options) {
         let resultString;
         if (result.stderr)
             throw result.stderr;
-        if (typeof result !== 'string' && result.stdout)
+        if (result.stdout)
             resultString = result.stdout.toString();
         return resultString || result;
     });
