@@ -20,7 +20,7 @@ function default_1(script, options) {
             throw result.stderr;
         if (result.stdout)
             resultString = result.stdout.toString();
-        return resultString || result;
+        return typeof resultString === 'string' && resultString || result;
     });
 }
 exports.default = default_1;
